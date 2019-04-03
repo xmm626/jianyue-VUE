@@ -63,7 +63,7 @@ export default {
 									success: function() {
 										console.log('save success');
 										uni.uploadFile({
-											url: 'http://47.100.53.232:8080/api/user/avatar', 
+											url: 'http://****:8080/api/user/avatar', 
 											filePath: res.tempFilePaths[0],
 											name: 'file',
 											formData: {
@@ -88,7 +88,7 @@ export default {
 							success: function(res) {
 								console.log(JSON.stringify(res.tempFilePaths));
 								uni.uploadFile({
-									url: 'http://47.100.53.232:8080/api/user/avatar', //仅为示例，非真实的接口地址
+									url: 'http://****:8080/api/user/avatar', //仅为示例，非真实的接口地址
 									filePath: res.tempFilePaths[0],
 									name: 'file',
 									formData: {
