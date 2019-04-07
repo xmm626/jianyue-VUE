@@ -40,7 +40,15 @@
         {
             "path" : "pages/name_info/name_info",
             "style" : {}
-        }
+        },
+		{
+			 "path" : "pages/signup/signup",
+			"style" : {}
+		},
+		{
+			"path" : "pages/password/password",
+			"style" : {}
+		}
     ],
     "globalStyle" : {
         "navigationBarTextStyle" : "black",
