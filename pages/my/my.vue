@@ -119,6 +119,9 @@ export default {
 .avatar-box {
 	flex: 1 1 30%;
 }
+.avatar{
+	border-radius: 50%;
+}
 .info-box {
 	flex: 1 1 70%;
 	display: flex;

@@ -10,6 +10,7 @@
 			<view class="list-item list-item-heigher">
 				<view class="left">头像</view>
 				<view class="right"><image :src="avatar" class="avatar" @tap="showActionSheet"></image></view>
+				
 			</view>
 			<view class="list-item list-item-heigher"><view class="left">修改密码</view></view>
 		</view>
@@ -30,7 +31,7 @@ export default {
 	onShow() {
 		var _this = this;
 		uni.request({
-			url: 'http://47.1:8080/api/user/' + uni.getStorageSync('login_key').userId,
+			url: 'http://localhost:8080/api/user/' + uni.getStorageSync('login_key').userId,
 			method: 'GET',
 			header: { 'content-type': 'application/json' },
 			success: res => {
@@ -62,7 +63,7 @@ export default {
 									success: function() {
 										console.log('save success');
 										uni.uploadFile({
-											url: 'http://47.1:8080/api/user/avatar', 
+											url: 'http://localhost:8080/api/user/avatar', 
 											filePath: res.tempFilePaths[0],
 											name: 'file',
 											formData: {
@@ -87,7 +88,7 @@ export default {
 							success: function(res) {
 								console.log(JSON.stringify(res.tempFilePaths));
 								uni.uploadFile({
-									url: 'http://47.1:8080/api/user/avatar', //仅为示例，非真实的接口地址
+									url: 'http://localhost:8080/api/user/avatar', //仅为示例，非真实的接口地址
 									filePath: res.tempFilePaths[0],
 									name: 'file',
 									formData: {
@@ -121,6 +122,11 @@ export default {
 }
 .right {
 	flex: 1 1 70%;
+}
+.avatar{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
 }
 </style>
 
