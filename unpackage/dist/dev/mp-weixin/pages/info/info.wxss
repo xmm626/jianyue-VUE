@@ -18,4 +18,9 @@
 	    -ms-flex: 1 1 70%;
 	        flex: 1 1 70%;
 }
+.avatar{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
 

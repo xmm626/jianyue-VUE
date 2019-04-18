@@ -102,7 +102,7 @@ var loginRes, _self;var _default =
 
     }
     uni.request({
-      url: 'http://47.100.53.232:8080/api/user/' + uni.getStorageSync('login_key').userId,
+      url: this.apiServer + '/user/' + uni.getStorageSync('login_key').userId,
       method: 'GET',
       header: { 'content-type': 'application/json' },
       success: function success(res) {

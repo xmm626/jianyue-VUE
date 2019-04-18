@@ -1,0 +1,30 @@
+
+.article-title{
+	font-weight:bold;
+}
+.article-info{
+	color: #E9E9E9;
+}
+.avatar{
+	border-radius: 50%;
+	width: 75rpx;
+	height: 75rpx;
+}
+.comment-item{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	margin-top: 15rpx;
+}
+.left{
+	margin-top: 50rpx;
+}
+.right{
+	margin-left: 40rpx;
+}
+.info-text{
+	margin-top: 30rpx;
+}
+
+

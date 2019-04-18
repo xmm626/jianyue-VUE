@@ -7,7 +7,10 @@
     "pages/write/write",
     "pages/info/info",
     "pages/setting/setting",
-    "pages/name_info/name_info"
+    "pages/name_info/name_info",
+    "pages/signup/signup",
+    "pages/password/password",
+    "pages/article_detail/article_detail"
   ],
   "subPackages": [],
   "window": {

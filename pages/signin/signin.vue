@@ -27,8 +27,9 @@ export default {
 			userDTO: {
 				mobile: '',
 				password: ''
-			}
+			},
 		};
+		
 	},
 	onLoad() {
 		uni.setNavigationBarTitle({

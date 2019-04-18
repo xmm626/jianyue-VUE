@@ -29,6 +29,10 @@
             "path" : "pages/write/write",
             "style" : {}
         },
+		{
+		    "path" : "pages/write/index",
+		    "style" : {}
+		},
         {
             "path" : "pages/info/info",
             "style" : {}
@@ -51,6 +55,31 @@
 		},
 		{
 			"path" : "pages/article_detail/article_detail",
+			"style" : {}
+		},
+		{
+			"path" : "pages/flow/flow",
+			"style" : {}
+		},
+		{
+			"path" : "pages/mywrite/mywrite",
+			"style" : {
+			}
+		},
+		{
+			"path" : "pages/likewrite/likewrite",
+			"style" : {}
+		},
+		{
+			"path" : "pages/personindex/personindex",
+			"style" : {}
+		},
+		{
+			"path" : "pages/mywrite/otherwrite",
+			"style" : {}
+		},
+		{
+			"path" : "pages/likewrite/otherlikewrite",
 			"style" : {}
 		}
     ],

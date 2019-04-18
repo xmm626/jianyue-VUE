@@ -8,7 +8,40 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -21,13 +54,58 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 {
   data: function data() {
     return {
-      title: 'Hello' };
+      articles: [] };
 
   },
   onLoad: function onLoad() {
-
+    this.getArticles();
   },
-  methods: {} };exports.default = _default;
+  onShow: function onShow() {},
+  onPullDownRefresh: function onPullDownRefresh() {
+    this.getArticles();
+  },
+  methods: {
+    getArticles: function getArticles() {
+      var _this = this;
+      uni.request({
+        url: this.apiServer + '/article/list',
+        method: 'GET',
+        header: {
+          'content-type': 'application/x-www.form-urlencoded' },
+
+        success: function success(res) {
+          _this.articles = res.data.data;
+        },
+        complete: function complete() {
+          uni.stopPullDownRefresh();
+        } });
+
+    },
+    gotoDetail: function gotoDetail(aId) {
+      uni.navigateTo({
+        url: '../article_detail/article_detail?aId=' + aId });
+
+    },
+    handleTime: function handleTime(datetime) {
+      var date = new Date(datetime);
+      var Y = date.getFullYear() + '-';
+      var M = date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) + '-' : date.getMonth() + 1 + '-';
+      var D = date.getDate() < 10 ? '0' + date.getDate() + ' ' : date.getDate() + ' ';
+      var h = date.getHours() < 10 ? '0' + date.getHours() + ':' : date.getHours() + ':';
+      var m = date.getMinutes() < 10 ? '0' + date.getMinutes() + ':' : date.getMinutes() + ':';
+      var s = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
+      return Y + M + D + h + m + s;
+    },
+    handleContent: function handleContent(msg) {
+      var description = msg;
+      description = description.replace(/(\n)/g, "");
+      description = description.replace(/(\t)/g, "");
+      description = description.replace(/(\r)/g, "");
+      description = description.replace(/<\/?[^>]*>/g, "");
+      description = description.replace(/\s*/g, "");
+      return description;
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),
 
@@ -53,19 +131,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("view", { staticClass: "content" }, [
-    _c("image", { staticClass: "logo", attrs: { src: "../../static/1a.jpg" } }),
-    _c("view", [
-      _c("text", { staticClass: "title" }, [_vm._v(_vm._s(_vm.title))])
-    ])
-  ])
-}
+var render = function () {}
 var staticRenderFns = []
-render._withStripped = true
 
 
 

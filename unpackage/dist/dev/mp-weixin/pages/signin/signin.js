@@ -30,6 +30,7 @@
 
 
 
+
 {
   data: function data() {
     return {
@@ -49,7 +50,7 @@
       var _this = this;
       // console.log(userDTO.mobile + ',' + userDTO.password);
       uni.request({
-        url: 'http://47.100.53.232:8080/api/user/sign_in',
+        url: this.apiServer + '/user/sign_in',
         method: 'POST',
         data: {
           mobile: userDTO.mobile,
@@ -72,7 +73,9 @@
             uni.showToast({
               title: '登录成功' });
 
-            uni.navigateBack();
+            uni.switchTab({
+              url: '../my/my' });
+
           }
           //登录失败，弹出各种原因
           else {
@@ -182,6 +185,11 @@ var render = function() {
           }
         },
         [_vm._v("登录")]
+      ),
+      _c(
+        "navigator",
+        { staticClass: "nav", attrs: { url: "../signup/signup" } },
+        [_vm._v("注册新账号")]
       )
     ],
     1

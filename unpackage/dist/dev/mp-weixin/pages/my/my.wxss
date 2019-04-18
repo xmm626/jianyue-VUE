@@ -19,6 +19,9 @@
 	    -ms-flex: 1 1 30%;
 	        flex: 1 1 30%;
 }
+.avatar.data-v-6178947e{
+	border-radius: 50%;
+}
 .info-box.data-v-6178947e {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1 1 70%;

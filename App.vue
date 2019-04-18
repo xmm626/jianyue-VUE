@@ -14,6 +14,9 @@
 </script>
 
 <style>
+	
  @import 'style/style.css';
+ @import './graceUI/graceUI.css';
+ @import './static/markdown.css';
 </style>
 
